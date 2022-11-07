@@ -1,0 +1,112 @@
+What is Go?
+- Go is a cross-platform, open source programming language
+- Go can be used to create high-performance applications
+- It is a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language
+
+What is Go Used For?
+- Web development (server-side)
+- Developing network-based programs
+- Developing cross-platform enterprise applications
+- Cloud-native development
+
+Go Syntax
+- A Go file consists of the following parts:
+    - Package declaration
+    - Import packages
+    - Functions
+    - Statements and expressions
+
+Go Comments
+- Single line - //
+- Multi line - /* */
+
+
+Declaring (Creating) Variables
+
+- var variablename type = value
+- variablename := value
+- const CONSTNAME type = value
+
+Go Output Functions
+
+- Print() - The Print() function prints its arguments with their default format.
+- Println() - The Println() function is similar to Print() with the difference that a whitespace is added between the arguments, and a newline is added at the end
+- Printf() - The Printf() function first formats its argument based on the given formatting verb and then prints them. [%v or %T]
+
+Formatting Verbs
+- %v	Prints the value in the default format
+- %#v	Prints the value in Go-syntax format
+- %T	Prints the type of the value
+- %%	Prints the % sign
+
+Go Data Types
+
+- Go is statically typed, meaning that once a variable type is defined, it can only store data of that type.
+
+- Go has three basic data types:
+    - bool: represents a boolean value and is either true or false
+    - Numeric: represents integer types, floating point values, and complex types
+    - string: represents a string value
+
+- Arrays
+    Arrays are used to store multiple values of the same type in a single variable, instead of declaring separate variables for each value.
+
+    Declaration
+    var array_name = [length]datatype{values} // here length is defined
+    or
+    var array_name = [...]datatype{values} // here length is inferred
+    ------------------------------------------------------------------
+    array_name := [length]datatype{values} // here length is defined
+    or
+    array_name := [...]datatype{values} // here length is inferred
+
+    NOTE:
+    If an array or one of its elements has not been initialized in the code, it is assigned the default value of its type.
+    The default value for int is 0, and the default value for string is "".
+
+- Slices [ the length of a slice can grow and shrink ]
+
+    In Go, there are several ways to create a slice:
+        Using the []datatype{values} format
+        Create a slice from an array
+        Using the make() function
+    
+    Declaration
+    slice_name := []datatype{values}
+
+    In Go, there are two functions that can be used to return the length and capacity of a slice:
+        len() function - returns the length of the slice (the number of elements in the slice)
+        cap() function - returns the capacity of the slice (the number of elements the slice can grow or shrink to)
+
+    Create a Slice From an Array
+        var myarray = [length]datatype{values} // An array
+        myslice := myarray[start:end] // A slice made from the array
+
+    Create a Slice With The make() Function
+        slice_name := make([]type, length, capacity)
+
+    Access Elements of a Slice
+        You can access a specific slice element by referring to the index number.
+    
+    Change Elements of a Slice
+        You can also change a specific slice element by referring to the index number.
+
+    Append Elements To a Slice
+        You can append elements to the end of a slice using the append()function:
+        slice_name = append(slice_name, element1, element2, ...)
+
+The switch Statement
+    - Use the switch statement to select one of many code blocks to be executed.
+    - The switch statement in Go is similar to the ones in C, C++, Java. 
+      The difference is that it only runs the matched case so it does not need a break statement.
+
+      switch expression {
+        case x:
+        // code block
+        case y:
+        // code block
+        case z:
+        ...
+        default:
+        // code block
+      }

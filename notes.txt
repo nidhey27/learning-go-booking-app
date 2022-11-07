@@ -110,3 +110,47 @@ The switch Statement
         default:
         // code block
       }
+
+      - This is how it works:
+            The expression is evaluated once
+            The value of the switch expression is compared with the values of each case
+            If there is a match, the associated block of code is executed
+            The default keyword is optional. It specifies some code to run if there is no case match
+
+Loops
+- The for loop is the only loop available in Go.
+
+    The for loop can take up to three statements:
+    for statement1; statement2; statement3 {
+        // code to be executed for each iteration
+    }
+
+    statement1 Initializes the loop counter value.
+    statement2 Evaluated for each loop iteration. If it evaluates to TRUE, the loop continues. If it evaluates to FALSE, the loop ends.
+    statement3 Increases the loop counter value.
+
+    Example:
+    for i:=0; i < 5; i++ {
+        fmt.Println(i)
+    }
+
+    The continue statement is used to skip one or more iterations in the loop. It then continues with the next iteration in the loop.
+    The break statement is used to break/terminate the loop execution.
+
+    The range keyword is used to more easily iterate over an array, slice or map. It returns both the index and the value.
+    The range keyword is used like this:
+    for index, value := array|slice|map {
+        // code to be executed for each iteration
+    }
+
+    fruits := [3]string{"apple", "orange", "banana"}
+    for idx, val := range fruits {
+        fmt.Printf("%v\t%v\n", idx, val)
+    }
+
+    To only show the value or the index, you can omit the other output using an underscore (_).
+
+    fruits := [3]string{"apple", "orange", "banana"}
+    for _, val := range fruits {
+        fmt.Printf("%v\n", val)
+    }

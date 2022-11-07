@@ -154,3 +154,25 @@ Loops
     for _, val := range fruits {
         fmt.Printf("%v\n", val)
     }
+
+
+Go Structures
+    A struct (short for structure) is used to create a collection of members of different data types, into a single variable.
+    While arrays are used to store multiple values of the same data type into a single variable, structs are used to store multiple values of different data types into a single variable.
+    A struct can be useful for grouping data together to create records.
+
+    type struct_name struct {
+        member1 datatype;
+        member2 datatype;
+        member3 datatype;
+        ...
+    }
+
+Go Maps
+    Maps are used to store data values in key:value pairs.
+    Each element in a map is a key:value pair.
+    A map is an unordered and changeable collection that does not allow duplicates.
+    The length of a map is the number of its elements. You can find it using the len() function.
+    The default value of a map is nil.
+    Maps hold references to an underlying hash table.
+    Go has multiple ways for creating maps.
